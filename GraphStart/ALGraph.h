@@ -2,6 +2,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include<queue>
 #include "CircQueue.h"
 
 typedef int InfoType;
@@ -27,6 +28,11 @@ typedef struct ALGraph {
 	int VexNum, ArcNum;
 	int kind;
 }ALGraph;
+
+typedef struct locate {
+	int x;
+	int y;
+}locate;
 
 ALGraph GraphInit(void);
 VertexType FindFistAdjVex(ALGraph g, int v);

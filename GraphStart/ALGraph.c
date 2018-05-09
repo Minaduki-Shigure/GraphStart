@@ -119,3 +119,43 @@ void BFS(ALGraph g)
 	putchar('\n');
 	return;
 }
+
+void MazeSolve(int x0, int y0, int x1, int y1)
+{
+	int i, j;
+	queue<locate> que;
+	for (i = 0; i < 6; i++)
+	{
+		for (j = 0; j < 6; j++)
+		{
+			dis[i][j] = -1;
+		}
+	}
+	locate a;
+	a.x = x0; a.y = y0;
+	que.push(a);
+	dis[x0][y0] = 0;
+	while (que.size())
+	{
+		a = que.front();
+		cout << "(" << a.x << "," << a.y << ")" << endl;
+		que.pop();
+		int i;
+		for (i = 0; i < 4; i++)
+		{
+			int nx, ny;
+			nx = a.x + dx[i];
+			ny = a.y + dy[i];
+			if (0 <= nx && nx < 6 && 0 <= ny && ny < 6 && maze[nx][ny] != 1 && dis[nx][ny] == -1)
+			{
+				dis[nx][ny] = dis[a.x][a.y] + 1;
+				a.x = nx;
+				a.y = ny;
+				que.push(a);
+				if (nx == x1 && ny == y1) break;
+			}
+		}
+		if (i != 4) break;
+	}
+
+}
