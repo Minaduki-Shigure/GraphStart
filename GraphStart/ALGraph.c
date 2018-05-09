@@ -117,5 +117,41 @@ void BFS(ALGraph g)
 		}
 	}
 	putchar('\n');
+	QueueDestroy(&q);
+	return;
+}
+
+void BFSTraverse(ALGraph G)
+{
+	int i;
+	int visited[MAX_VERTEX_NUM];
+	ArcNode *parc;
+	CircQueue Q=QueueInit(MAX_VERTEX_NUM);
+	for (i = 0; i < G.VexNum; i++) 
+		visited[i] = 0;
+	for (i = 0; i < G.VexNum; i++) 
+	{
+		if (!visited[i])
+		{
+			visited[i] = 1;
+			printf("%d", G.Vertices[i].data);
+			EnQueue(&Q, i);
+			while (Q.front!=Q.rear)				
+			{
+				DeQueue(&Q);
+				parc = G.Vertices[i].FirstArc;
+				while (parc)
+				{
+					if (!visited[parc->AdjVex]) 
+					{
+						visited[parc->AdjVex] = 1;
+						printf("%d ", G.Vertices[parc->AdjVex].data);
+						EnQueue(&Q, parc->AdjVex);
+					}
+					parc = parc->NextArc;
+				}
+			}
+		}
+	}
 	return;
 }

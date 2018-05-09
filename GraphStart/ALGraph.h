@@ -34,3 +34,4 @@ VertexType FindNextAdjVex(ALGraph g, int v, int w);
 void DFS(ALGraph g, int v);
 void DFSTraverse(ALGraph g, int vex);
 void BFS(ALGraph g);
+void BFSTraverse(ALGraph G);
