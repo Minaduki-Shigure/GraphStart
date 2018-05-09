@@ -1,5 +1,9 @@
 #pragma once
 
+#include"iostream"
+#include<queue>
+using namespace std;
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<memory.h>

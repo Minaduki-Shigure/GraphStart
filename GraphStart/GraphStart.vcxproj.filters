@@ -23,13 +23,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ALGraph.c">
+    <ClCompile Include="ALGraph.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CircQueue.c">
+    <ClCompile Include="CircQueue.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

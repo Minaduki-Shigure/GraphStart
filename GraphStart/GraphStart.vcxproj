@@ -119,9 +119,9 @@
     <ClInclude Include="CircQueue.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ALGraph.c" />
-    <ClCompile Include="CircQueue.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="ALGraph.cpp" />
+    <ClCompile Include="CircQueue.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
