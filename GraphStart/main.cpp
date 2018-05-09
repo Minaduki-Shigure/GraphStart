@@ -1,7 +1,5 @@
 #include "ALGraph.h"
 
-
-
 int main(void)
 {
 	ALGraph G = GraphInit();
