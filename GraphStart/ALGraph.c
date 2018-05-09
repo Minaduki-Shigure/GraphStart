@@ -20,8 +20,6 @@ ALGraph GraphInit(void)
 	{
 		printf("请输入第%d条边的信息：", k + 1);
 		scanf_s("%d %d", &gef, &gel);
-		gef = gef = 1;
-		gel = gel - 1;
 		node = (ArcNode*)malloc(sizeof(ArcNode));
 		if (node == NULL) 
 			exit(-1);
