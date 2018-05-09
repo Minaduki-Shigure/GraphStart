@@ -100,6 +100,33 @@ void DFSTraverse(ALGraph g, int vex)
 	putchar('\n');
 	return;
 }
+/*
+void widesort(ALGraph *p, int n)
+{
+	int t;
+	headnode *s;
+	CircQueue q = QueueInit(MAX_VERTEX_NUM);
+	cout << p->graph[n - 1].number << "->";
+	visit[n] = 1;
+	inquene(q, n);
+	while (quenempty(q))
+	{
+		t = outquene(q);
+		s = p->graph[t - 1].next;
+		while (s)
+		{
+			t = s->number;
+			if (visit[t] == 0)
+			{
+				cout << p->graph[t - 1].number << "->";
+				visit[t] = 1;
+				inquene(q, t);
+			}
+			s = s->next;
+		}
+
+	}
+}*/
 
 void BFS(ALGraph g)
 {
@@ -119,7 +146,7 @@ void BFS(ALGraph g)
 			while (q.front != q.rear)
 			{
 				u = q.base[q.front];
-				DeQueue(&q);
+				v = DeQueue(&q);
 				for (ptr = g.Vertices[v].FirstArc; ptr; ptr = ptr->NextArc)
 				{
 					if (!visited[ptr->AdjVex])
